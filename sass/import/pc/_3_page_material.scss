@@ -1,0 +1,55 @@
+.p-top {
+    &__material-menu {
+        padding: var(--spacing-size-64) 0;
+        background-color: var(--items-color);
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            padding: 0 var(--spacing-size-16);
+            .swiper-wrapper {
+                padding-bottom: var(--spacing-size-64);
+            }
+            .menu-item {
+                background-color: var(--base-bg-color);
+                padding: var(--spacing-size-16);
+                
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                border-radius: var(--spacing-size-4);
+                overflow: hidden;
+                border-bottom: 2px solid var(--theme-color);
+                cursor: all-scroll;
+                &:hover {
+                    @include box-shadow;
+                }
+                .area-top {
+                    width: 100%;
+                }
+                .area-bottom {
+                    width: 100%;
+                    
+                }
+            }
+            .swiper-pagination-bullet-active {
+                background-color: var(--theme-color);
+            }
+        }
+        &.pancake-menu-list {
+            .menu-item {
+                min-height: 300px;
+            }
+        }
+        &.hashed-beef-menu-list {
+            .menu-item {
+                min-height: 300px;
+            }
+        }
+        &.drinks-menu-list {
+            .menu-item {
+                min-height: 146px;
+            }
+        }
+    }// __material-menu
+    
+}

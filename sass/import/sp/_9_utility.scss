@@ -1,0 +1,156 @@
+//============================================
+// 余白
+//============================================
+.u-mt0 {margin-top: 0px;}
+.u-mt5 {margin-top: 5px;}
+.u-mt10 {margin-top: 10px;}
+.u-mt15 {margin-top: 15px;}
+.u-mt20 {margin-top: 20px;}
+.u-mt30 {margin-top: 30px;}
+.u-mt40 {margin-top: 40px;}
+.u-mt50 {margin-top: 50px;}
+.u-mt60 {margin-top: 60px;}
+.u-mt70 {margin-top: 70px;}
+.u-mt80 {margin-top: 80px;}
+.u-mt90 {margin-top: 90px;}
+
+.u-mb0 {margin-bottom: 0;}
+.u-mb5 {margin-bottom: 5px;}
+.u-mb10 {margin-bottom: 10px;}
+.u-mb15 {margin-bottom: 15px;}
+.u-mb20 {margin-bottom: 20px;}
+.u-mb30 {margin-bottom: 30px;}
+.u-mb40 {margin-bottom: 40px;}
+.u-mb50 {margin-bottom: 50px;}
+.u-mb60 {margin-bottom: 60px;}
+.u-mb70 {margin-bottom: 70px;}
+.u-mb80 {margin-bottom: 80px;}
+.u-mb90 {margin-bottom: 90px;}
+
+.u-pb0 {padding-bottom: 0px;}
+
+
+
+//============================================
+// 色
+//============================================
+.u-col {
+	color: $color;
+	&__red {color: #F00;}
+}
+
+
+
+//============================================
+// フォント
+//============================================
+.u-mincho {@include mincho;}
+.u-gothic {@include gothic;}
+
+.u-italic {font-style: italic;}
+
+
+
+//============================================
+// 文字構え
+//============================================
+.u-center {
+	text-align: center !important;
+	th,td {text-align: center !important;}
+}
+.u-right {
+	text-align: right !important;
+	th,td {text-align: right !important;}
+}
+.u-left {
+	text-align: left !important;
+	th,td {text-align: left !important;}
+}
+
+
+
+//============================================
+// サイト幅でセンタリング
+//============================================
+.c-wrap {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+
+
+//============================================
+// 背景
+//============================================
+.u-bg {}
+
+
+
+//============================================
+// 区切り
+//============================================
+.c-separate1 {}
+
+
+
+//============================================
+// ボタン
+//============================================
+.c-btn1 {}
+
+
+
+//============================================
+// 見出し
+//============================================
+.c-title1 {}
+
+
+
+//============================================
+// テキスト
+//============================================
+.c-txt1 {}
+
+
+
+//============================================
+// リンク
+//============================================
+.c-link1 {}
+
+
+
+//============================================
+// 表
+//============================================
+.c-table1 {}
+
+.c-table__nostyle {//スタイル初期化
+	width: 100%;
+	th,td {
+		padding: 2px 0 !important;
+		border: 0;
+		font-weight: normal;
+		text-align: left;
+		vertical-align: top;
+		background: transparent;
+	}
+}
+
+
+
+//============================================
+// インデント
+//============================================
+.u-indent {
+	text-indent: -1em;
+	padding-left: 1em;
+}
+
+
+
+//============================================
+// アンカーリンク調整
+//============================================
+.u-anchor {}

@@ -1,0 +1,156 @@
+/*=======================================
+フッター
+=========================================*/
+.l-footer {
+	background-color: var(--theme-color);
+	color: var(--type-lighten);
+	.container {
+		width: calc(var(--container-w) - #{$container-pd});
+		margin: 0 auto;
+	}
+	.footer-menu {
+		display: none;
+	}
+	.copyright {
+		padding-top: var(--spacing-size-16);
+		padding-bottom: var(--spacing-size-32);
+		text-align: center;
+		font-size: var(--fs-18);
+	}
+}
+
+
+/*=======================================
+ページトップへ
+=========================================*/
+.l-pagetop {
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	z-index: 999;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background-color: var(--base-bg-color);
+	a {
+		font-size: var(--fs-48);
+		color: var(--theme-color);
+		line-height: 52px;
+	}
+}
+
+.l-socical {
+	display: none;
+}
+
+
+.l-search-box {
+
+	background-color: var(--base-bg-color);
+	position: fixed;
+	width: 100%;
+	height: calc(100vh - var(--header-height));
+	z-index: 99;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding-top: var(--header-height);
+	.container {
+		width: calc(var(--container-w) - #{$container-pd});
+		margin: 0 auto;
+		.title-box {
+			position: relative;
+			margin-top: var(--spacing-size-64);
+			&:before {
+				background-color: var(--title-box-line-color);
+				content: "";
+				width: 174px;
+				height: 8px;
+				position: absolute;
+				bottom: 0;
+				left: 16px;
+			}
+			h1.title {
+				font-size: var(--fs-40);
+				margin-bottom: var(--spacing-size-8);
+				line-height: 1.2;
+			}
+			p.desc {
+				font-size: var(--fs-18);
+				line-height: 1.4;
+				margin-bottom: var(--spacing-size-32);
+				font-weight: 500;
+			}
+		}
+	}
+	&.isActive {
+		visibility: visible;
+		-webkit-animation: menuOpen 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        	animation: menuOpen 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	}
+
+	&.isClose {
+		-webkit-animation: menuClose 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        	animation: menuClose 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	}
+
+		
+	.search-form {
+		margin-top: var(--spacing-size-64);
+		position: relative;
+		input.search-control {
+			width: calc(100% - var(--spacing-size-32));
+		}
+		button.bt-search {
+			position: absolute;
+			right: var(--spacing-size-16);
+			top: calc(53px/2 - 14px);
+			font-size: var(--fs-18);
+			color: #999;
+			border: none;
+			background-color: transparent;
+		}
+	}
+	.search-items {
+		width: calc(100% - var(--spacing-size-32));
+		padding: var(--spacing-size-16);
+		border-radius: var(--spacing-size-4);
+		background-color: #f0f0f0;
+		.item {
+			width: calc(100% - var(--spacing-size-16));
+			padding: var(--spacing-size-16) var(--spacing-size-8);
+			position: relative;
+			&:hover {
+				background-color: #fff;
+				border-radius: var(--spacing-size-4);
+			}
+			&::before {
+				background-color: #fff;
+				width: 100%;
+				height: 1px;
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				
+			}
+		}
+	}
+	
+	.close {
+		width: var(--spacing-size-32);
+		height: var(--spacing-size-32);
+		font-size: var(--fs-32);
+		position: absolute;
+		bottom: var(--spacing-size-32);
+		left: var(--spacing-size-32);
+		cursor: pointer;
+		text-align: center;
+		
+		&:hover {
+			color: var(--theme-color);
+		}
+	}
+}

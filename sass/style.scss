@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+/*
+Theme Name: Belleza
+Author: ProntoNet
+Author URI: http://www.prontonet.ne.jp/
+Version: 1.0
+*/
+
+$w: 1300px;
+
+@import "import/pc/_1_variables";
+
+@import "import/0_mixin";
+@import "import/0_reset";
+@import "import/0_wp-common";
+
+
+
+
+/* ----------------------------- 全体 */
+body {
+	font-size: var(--fs-16);
+	line-height: 1.8em;
+	color: var(--type-darken);
+	background: var(--base-bg-color);
+	position: relative;
+	@include envi;
+}
+
+
+a {
+	&:link,
+	&:visited {
+		color: $color;
+		text-decoration: underline;
+	}
+	&:hover,
+	&:active {text-decoration: none;}
+
+	&,
+	& img {@include transition($value:.2s ease all);}
+	&:hover img {@include opacity($value:0.65);}
+}
+
+
+.sp-only {display: none !important;}
+
+img,
+.bx-wrapper img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+
+
+
+/* ----------------------------- 1. 各ページ共通 */
+@import "import/pc/1_header";
+@import "import/pc/1_footer";
+
+
+
+/* ----------------------------- 2. トップページ */
+@import "import/pc/2_top";
+
+
+
+/* ----------------------------- 3. 下層ページ */
+@import "import/pc/3_page";
+
+
+
+
+/* ----------------------------- 4. 投稿 */
+@import "import/pc/4_side";
+
+
+
+
+/* ----------------------------- 9. 共通パーツ */
+@import "import/pc/9_utility";
+
+/* ----------------------------- 10. Grid layout */
+@import "import/pc/_10_grid";
+
+/* ----------------------------- 10. Animation Effect */
+@import "import/pc/_10_animation";
+
+
+/* ----------------------------- 10. Animation Effect */
+@import "import/_11_plugin_swiperjs";
+
+#__bs_notify__ {display: none !important;}

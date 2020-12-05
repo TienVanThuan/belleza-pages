@@ -1,0 +1,91 @@
+// Base
+$theme-color: #ffcf08;
+$darken-color: #0b0b0b;
+$base-bg: #ffffff;
+$lighten-color: #f0f0f0;
+$items-color: #F9FAFB;
+// Header
+$header-h: 80px;
+
+
+//feedback
+$fb-avatar-size: 80px;
+$feedback-w: $fb-avatar-size + 32px;
+
+$container-pd: 312px;
+$container-pd-1024: 64px;
+$container-pd-768: 0px;
+
+:root {
+	--theme-color: #{$theme-color};
+	--theme-dark-color: #{$darken-color};
+	--base-bg-color: #{$base-bg};
+	--items-color: #{$items-color};
+	--type-lighten: #ffffff;
+	--type-dark: #{$darken-color};
+
+	// --button-color: #{$theme-color};
+	// --button-type-color: var(--type-lighten);
+
+	/**
+	 * Spacing Size
+	 **/
+	@for $i from 1 through 192 {
+		@if ($i <= 128 and $i % 8 == 0){
+			$sizes: $i + px;
+			--spacing-size-#{$i}: #{$sizes};
+		}
+		@else if ($i == 4){
+			$sizes: $i + px;
+			--spacing-size-#{$i}: #{$sizes};
+		}
+		@else if ($i == 192){
+			$sizes: $i + px;
+			--spacing-size-#{$i}: #{$sizes};
+		}
+		@else {
+
+		}
+	}
+	/**
+	 * Font Size
+	 **/
+	 @for $i from 1 through 96 {
+		@if ($i <= 96 and $i >= 16 and $i % 4 == 0){
+			$sizes: $i + px;
+			--fs-#{$i}: #{$sizes};
+		}
+		@else if ($i == 12 or $i == 14 or $i == 18){
+			$sizes: $i + px;
+			--fs-#{$i}: #{$sizes};
+		}
+		@else{
+
+		}
+	}
+
+	--header-height: #{$header-h};
+	--header-bg-color: #{$base-bg};
+
+	--header-logo-height: 50px;
+	--header-menu-line: #{$theme-color};
+	--header-menu-line-height: 4px;
+	--header-menu-line-width: 64px;
+
+	--header-bt-v1-color: #{$darken-color};
+	--header-bt-v2-color: #{$theme-color};
+	--header-bt-height: #{$header-h};
+
+
+	--bt-v1-color: #{$darken-color};
+	--bt-v2-color: #{$theme-color};
+}
+
+// @font-face {
+// 	font-family: 'SVN-Heart And Soul Smooth';
+// 	src: url('./fonts/SVN-HeartAndSoulSmooth.woff2') format('woff2'),
+// 		url('./fonts/SVN-HeartAndSoulSmooth.woff') format('woff');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+
